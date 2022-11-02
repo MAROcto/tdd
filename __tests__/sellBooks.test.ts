@@ -41,3 +41,17 @@ describe('sellBooks', () => {
     })
   })
 })
+
+describe('sellBooks', () => {
+  describe('computePrice', () => {
+    test('Compute the price of four differents books and expect it to be 25.6 (20% reduction)', () => {
+      //Given
+      var books = ['Tome 1', 'Tome 2', 'Tome 3', 'Tome 4']
+      var expectedPrice = 4 * 8 * 0.8
+      //When
+      var computedPrice = sellBooks.computePrice(books)
+      //Then
+      expect(computedPrice).toBe(expectedPrice)
+    })
+  })
+})
