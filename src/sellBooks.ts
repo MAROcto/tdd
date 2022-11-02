@@ -17,7 +17,7 @@ const computePrice = (books: Tome[]): number => {
     case 4:
       return 25.6
     default:
-      return 0
+      return -1
   }
 }
 
