@@ -1,4 +1,12 @@
-const computePrice = (books: string[]): number => {
+enum Tome {
+  One = 'Tome 1',
+  Two = 'Tome 2',
+  Three = 'Tome 3',
+  Four = 'Tome 4',
+  Five = 'Tome 5',
+}
+
+const computePrice = (books: Tome[]): number => {
   switch (books.length) {
     case 1:
       return 8
@@ -14,5 +22,6 @@ const computePrice = (books: string[]): number => {
 }
 
 export default {
+  Tome,
   computePrice,
 }
