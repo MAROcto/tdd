@@ -1,9 +1,14 @@
 import sellBooks from '../src/sellBooks'
 
 describe('sellBooks', () => {
-  describe('discount', () => {
-    test("add '!' to the end the designated number times", () => {
-      expect(sellBooks.exaggerate('Yippee', 8)).toBe('Yippee!!!!!!!!')
+  describe('computePrice', () => {
+    test('Compute the price of one book.', () => {
+      //Given
+      var books = ['Tome 1']
+      //When
+      var computedPrice = sellBooks.computePrice(books)
+      //Then
+      expect(computedPrice).toBe(sellBooks.bookPrice)
     })
   })
 })
